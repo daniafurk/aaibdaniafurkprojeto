@@ -7,6 +7,7 @@ tasks:
       sudo pip3 install streamlit
       sudo pip3 install streamlit-autorefresh
       sudo pip3 install matplotlib
+      sudo apt-get install libsndfile1
       sudo pip install librosa
       sudo apt install -y mosquitto
       sudo apt install mosquitto-clients
