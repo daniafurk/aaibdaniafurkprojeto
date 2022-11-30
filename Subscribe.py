@@ -1,11 +1,8 @@
 import paho.mqtt.client as mqtt
-import time 
 import csv 
-import pandas as pd 
 import json
 
 MQTT_broker = 'test.mosquitto.org'
-now = time.time()
 
 
 def on_connect(client, userdata, flags,rc):
