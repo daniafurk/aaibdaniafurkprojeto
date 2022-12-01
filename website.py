@@ -22,14 +22,10 @@ def plotfrequencydata():
 def plottimedata():
     y = np.loadtxt("test.csv", delimiter = ',')
     fig, ax = plt.subplots()
-    img1 = librosa.display.waveshow(y)
+    img1 = librosa.display.waveshow(y ,color='darkblue', alpha=0.3)
     ax.set(title = "Sonogram")
     graph2.pyplot(fig)
-    
-
-
-##Fazer refresh da página de 5 em 5s)
-#st_autorefresh(interval = 5000)
+   
 
 #Variáveis#
 MQTT_broker = 'mqtt.eclipseprojects.io'
@@ -41,12 +37,12 @@ sr = 22050
 ##Início do site##
 header = st.container()
 subheader = st.container()
-header.title("IoT Sound Recorder")
-subheader = st.subheader("Author: Dania Furk, Subject: AAIB")
+header.title("IoT Sound Recorder🎙️")
+subheader = st.subheader("Author: Dania Furk Subject: AAIB")
 
 ##Botão para começar aquisição##
 start_button, save_button = st.columns(2)
-##Container para o gráfico##
+##Container para os gráficos##
 graph1 = st.container()
 graph2 = st.container()
 
@@ -55,7 +51,7 @@ if start_button.button("Start Recording"):
    client.connect(MQTT_broker)
    client.publish("daniafurkaaib/start", payload = "start")
    with st.spinner('Recording and Extracting Features'):
-    #time do aquire and compute features
+    #Time to aquire and compute features#
        time.sleep(15)
        plotfrequencydata()
        plottimedata()
