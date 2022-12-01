@@ -22,6 +22,7 @@ tasks:
     command: streamlit run Site_controlo.py
   - name: Terminal 2
     init:  |
+      pip3.8 install numpy
       sudo apt install -y mosquitto
       sudo apt install mosquitto-clients
       sudo service mosquitto start
