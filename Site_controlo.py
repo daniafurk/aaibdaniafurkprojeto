@@ -6,10 +6,7 @@ import matplotlib.pyplot as plt
 import librosa
 import librosa.display
 import time
-#import pandas as pd 
 import numpy as np
-
-
 
 
 ##plots dos dados##
@@ -58,7 +55,8 @@ if start_button.button("Start Recording"):
    client.connect(MQTT_broker)
    client.publish("daniafurkaaib/start", payload = "start")
    with st.spinner('Recording and Extracting Features'):
-       time.sleep(13)
+    #time do aquire and compute features
+       time.sleep(15)
        plotfrequencydata()
        plottimedata()
        with open("test.csv", "rb") as file:

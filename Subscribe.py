@@ -14,7 +14,6 @@ def on_message(client, userdata, msg):
      print("Recieved Message")
      print(np.shape(np.array(m_list)))
      soundtofile(m_list)
-     #tofile(m_list)
            
 def soundtofile(a):
     np.savetxt("test.csv",a, delimiter = ',')
