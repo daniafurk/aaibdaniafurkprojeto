@@ -11,7 +11,7 @@ Ferramentas:
 
 Como utilizar:
 - Correr o publisher.py no PC que irá adquirir o som, que se encontra na pasta Ficheiros_PC.
-- Abrir o repositório no gitpod(pôr aqui o link)
+- Abrir o repositório no gitpod(https://github.com/daniafurk/aaibdaniafurkprojeto)
 - Carregar no Botão Start Recording para iniciar a comunicação e visualizar os resultados.
 
 
