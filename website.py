@@ -43,7 +43,7 @@ with subheader1:
 with subheader2:
     st.subheader("Subject: AAIB")
 
-##Botão para começar aquisição##
+##Botão para começar aquisição e para guardar os dados##
 start_button, save_button = st.columns(2)
 ##Container para os gráficos##
 graph1 = st.container()
