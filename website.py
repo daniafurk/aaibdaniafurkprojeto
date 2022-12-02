@@ -36,9 +36,12 @@ sr = 22050
 
 ##Início do site##
 header = st.container()
-subheader = st.container()
+subheader1, subheader2 = st.columns(2)
 header.title("IoT Sound Recorder🎙️")
-subheader = st.subheader("Author: Dania Furk Subject: AAIB")
+with subheader1:
+    st.subheader("Author: Dania Furk")
+with subheader2:
+    st.subheader("Subject: AAIB")
 
 ##Botão para começar aquisição##
 start_button, save_button = st.columns(2)
@@ -52,7 +55,7 @@ if start_button.button("Start Recording"):
    client.publish("daniafurkaaib/start", payload = "start")
    with st.spinner('Recording and Extracting Features'):
     #Time to aquire and compute features#
-       time.sleep(15)
+       time.sleep(16)
        plotfrequencydata()
        plottimedata()
        with open("test.csv", "rb") as file:
