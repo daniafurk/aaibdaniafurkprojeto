@@ -9,7 +9,7 @@ def on_connect(client, userdata, flags,rc):
     print(f"Connected with result code  {str(rc)} to MQTT broker on {MQTT_broker}")
 
 def on_message(client, userdata, msg): 
-     ##Aqui estou a repôr as minhas features em listas, pq antes tinha transformado em str 
+     ##Uncoding features##
      m_list =json.loads(msg.payload.decode())
      print("Recieved Message")
      print(np.shape(np.array(m_list)))
